@@ -2,6 +2,7 @@ package com.briup.apps.app02.web.controller;
 
 
 import com.briup.apps.app02.bean.Course;
+import com.briup.apps.app02.bean.extend.CourseExtend;
 import com.briup.apps.app02.service.ICouseService;
 import com.briup.apps.app02.utils.Message;
 import com.briup.apps.app02.utils.MessageUtil;
@@ -20,6 +21,14 @@ import java.util.List;
 public class CourseController {
     @Autowired
     private ICouseService iCouseService;
+
+
+    @ApiOperation("查询所有，课程中携带教师信息")
+    @GetMapping("/findAllWithTeacher")
+    public Message findAllWithTeacher() {
+        List<CourseExtend> list = iCouseService.findAllWithTeacher();
+        return MessageUtil.success("success", list);
+    }
 
     @ApiOperation("查询所有")
     @GetMapping("/findAll")

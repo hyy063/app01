@@ -4,7 +4,7 @@ public class Course {
     private Long id;
     private String name;
     private String description;
-    private Integer credit;
+    private String credit;
     private long teacher_id;
 
     public Long getId() {
@@ -31,11 +31,11 @@ public class Course {
         this.description = description;
     }
 
-    public Integer getCredit() {
+    public String getCredit() {
         return credit;
     }
 
-    public void setCredit(Integer credit) {
+    public void setCredit(String credit) {
         this.credit = credit;
     }
 
