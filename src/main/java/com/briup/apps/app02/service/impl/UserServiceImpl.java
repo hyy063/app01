@@ -20,7 +20,7 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public List<User> findAll() {
-        return userMapper.findAll();
+        return userMapper.selectAll();
     }
     @Override
     public  User findById(long id){

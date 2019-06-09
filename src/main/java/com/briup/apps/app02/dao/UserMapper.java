@@ -5,7 +5,8 @@ import java.util.List;
 
 public interface UserMapper {
     List<User> query(User user);
-    List<User> findAll();
+    List<User> selectAll();
+
     User selectByPrimaryKey(long id);
     void insert(User user);
     void update(User user);

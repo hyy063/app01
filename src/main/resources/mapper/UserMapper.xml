@@ -14,9 +14,7 @@
         </where>
     </select>
 
-    <select id="findAll" resultType="com.briup.apps.app02.bean.User">
-        select * from sms_user
-    </select>
+
 
     <select id="selectByPrimaryKey" resultType="com.briup.apps.app02.bean.User">
         select * from sms_user where id = #{id}
@@ -41,4 +39,7 @@
     <delete id="deleteByPrimary">
         delete from sms_user where id=#{id}
     </delete>
+    <select id="selectAll" resultType="com.briup.apps.app02.bean.User">
+        select * from sms_user
+    </select>
 </mapper>

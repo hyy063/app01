@@ -4,14 +4,14 @@ import com.briup.apps.app02.bean.Course;
 import com.briup.apps.app02.bean.extend.CourseExtend;
 import com.briup.apps.app02.dao.CourseMapper;
 import com.briup.apps.app02.dao.extend.CourseExtendMapper;
-import com.briup.apps.app02.service.ICouseService;
+import com.briup.apps.app02.service.ICourseService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 @Service
-public class CourseServiceImpl implements ICouseService {
+public class CourseServiceImpl implements ICourseService {
     @Resource
     private CourseMapper courseMapper;
     @Resource

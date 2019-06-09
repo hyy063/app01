@@ -3,7 +3,7 @@ package com.briup.apps.app02.web.controller;
 
 import com.briup.apps.app02.bean.Course;
 import com.briup.apps.app02.bean.extend.CourseExtend;
-import com.briup.apps.app02.service.ICouseService;
+import com.briup.apps.app02.service.ICourseService;
 import com.briup.apps.app02.utils.Message;
 import com.briup.apps.app02.utils.MessageUtil;
 import io.swagger.annotations.ApiOperation;
@@ -20,27 +20,27 @@ import java.util.List;
 @RequestMapping("/course")
 public class CourseController {
     @Autowired
-    private ICouseService iCouseService;
+    private ICourseService iCourseService;
 
 
     @ApiOperation("查询所有，课程中携带教师信息")
     @GetMapping("/findAllWithTeacher")
     public Message findAllWithTeacher() {
-        List<CourseExtend> list = iCouseService.findAllWithTeacher();
+        List<CourseExtend> list = iCourseService.findAllWithTeacher();
         return MessageUtil.success("success", list);
     }
 
     @ApiOperation("查询所有")
     @GetMapping("/findAll")
     public Message findAll(){
-        List<Course> list = iCouseService.findAll();
+        List<Course> list = iCourseService.findAll();
         return MessageUtil.success("success",list);
     }
 
     @ApiOperation("通过id查询")
     @GetMapping("/findById")
     public Message findById(@ApiParam(required = true)@RequestParam(value = "id") long id){
-        Course course = iCouseService.findById(id);
+        Course course = iCourseService.findById(id);
         return MessageUtil.success("success",course);
     }
 }
